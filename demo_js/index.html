@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head >
+<body onload="init()">
+    <h1 id="heading">Simple Animation</h1>
+    <p id="animate">This is a moving Text </p>
+    <!-- <p id="demo" style="position: absolute; left:200px;" >Vish</p> -->
+    <script>
+        const movePara = ()=>{
+            next = current + "px"
+            current += 1
+            paragraph.style.left = next
+            if(current > 300){
+                current = 0
+            }
+
+            let rate = 20
+            setTimeout(movePara, rate)
+        }
+
+        const init= ()=>{
+            paragraph = document.getElementById("animate")
+            paragraph.style.position = "absolute"
+            current = 0
+            movePara()
+        }
+        console.log("Welcome to java script")
+        // alert("Heyyyy")
+        // let name = prompt("Enter your name:")
+        // console.log("Welcome "+name)
+        // let heading = document.getElementsByTagName("h1")
+        // heading.textContent = "Welcome "+name
+
+        // let heading = document.getElementById("heading")
+        // heading.textContent = "Welcome "+name
+
+    </script>
+</body>
+</html>
